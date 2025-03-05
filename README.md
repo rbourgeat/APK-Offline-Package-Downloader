@@ -27,6 +27,12 @@ cd APK-Offline-Package-Downloader
 bash download_apk.sh
 ```
 
+4. (Optional) Generate the APKINDEX file for the downloaded packages:
+
+```bash
+bash generate_apkindex.sh
+```
+
 ## Example `packages.txt` File
 
 ```txt

@@ -8,7 +8,7 @@ fi
 PACKAGES_FILE="$(pwd)/packages.txt"
 
 if [ ! -f "$PACKAGES_FILE" ]; then
-    echo "packages.txt not found. Please provide a packages.txt file in the current directory."
+    echo "'./packages.txt' not found. Please provide a packages.txt file in the current directory."
     exit 1
 fi
 

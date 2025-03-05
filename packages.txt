@@ -1,2 +1,6 @@
 ca-certificates
 shadow
+wget
+curl
+vim
+git
