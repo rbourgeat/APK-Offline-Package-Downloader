@@ -15,7 +15,14 @@ fi
 USER_ID=$(id -u)
 GROUP_ID=$(id -g)
 
+if [ "$1" == "--community" ]; then
+    REPO_COMMAND="echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories &&"
+else
+    REPO_COMMAND=""
+fi
+
 docker run --rm -v "$(pwd)/packages":/packages -v "$PACKAGES_FILE:/packages.txt" alpine:latest /bin/sh -c "
+    $REPO_COMMAND
     apk update &&
     cd /packages &&
     apk fetch --no-cache --recursive \$(cat /packages.txt) &&

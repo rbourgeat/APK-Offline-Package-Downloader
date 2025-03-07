@@ -27,7 +27,13 @@ cd APK-Offline-Package-Downloader
 bash download_apk.sh
 ```
 
-4. (Optional) Generate the APKINDEX file for the downloaded packages:
+4. (Optional) Use the `--community` argument to include the `edge/community` repository:
+
+```bash
+bash download_apk.sh --community
+```
+
+5. (Optional) Generate the APKINDEX file for the downloaded packages:
 
 ```bash
 bash generate_apkindex.sh
